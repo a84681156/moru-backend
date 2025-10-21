@@ -6,6 +6,7 @@ moru/
 │   └── main/
 │       ├── java/com/project/moru/
 │       │   ├── MoruApplication.java      
+│       │   ├── common/                   공통 설정, 유틸
 │       │   ├── domain/                   DB 매핑 객체 (JPA Entity, MyBatis DTO)
 │       │   ├── repository/               JPA Repository
 │       │   ├── mapper/                   MyBatis Mapper
