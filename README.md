@@ -1,4 +1,6 @@
-# 폴더더구조 
+### 백엔드 Camel Case 통일 / DB Column Snake Case 통일
+
+### 폴더 구조 
 moru/                          
 ├── client/
 ├── .mvn/

@@ -5,7 +5,7 @@
 <mapper namespace="com.project.moru.mapper.mybatis.DummyMapper">
 
   <select id="selectAll" resultType="DummyDto">
-    SELECT user_id, username, name, email, role
+    SELECT user_id, user_name, name, email, role
     FROM dummy
   </select>
 

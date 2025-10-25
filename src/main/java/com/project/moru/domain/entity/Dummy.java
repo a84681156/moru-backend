@@ -12,20 +12,21 @@ import javax.persistence.*;
 @ToString
 @Table(name = "dummy")
 public class Dummy {
+  
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "user_id")
-  private Long user_id;
+  @Column(name = "user_id")  // DB 컬럼: user_id (snake_case)
+  private Long userId;  // Java 필드: userId (camelCase)
   
-  @Column(length = 50)
-  private String username;
+  @Column(name = "userName", length = 50)
+  private String userName;
   
-  @Column(length = 50)
+  @Column(name = "name", length = 50)
   private String name;
   
-  @Column(length = 50)
+  @Column(name = "email", length = 50)
   private String email;
   
-  @Column(length = 50)
+  @Column(name = "role", length = 50)
   private String role;
 }
