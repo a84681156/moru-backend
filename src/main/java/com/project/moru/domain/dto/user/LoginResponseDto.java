@@ -1,14 +1,15 @@
-package com.project.moru.domain.dto;
+package com.project.moru.domain.dto.user;
 
 import lombok.*;
 
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
+@ToString(exclude = "accessToken")
 public class LoginResponseDto {
-  private String accessToken;
   private String username;
   private String name;
+  private String accessToken;
 }

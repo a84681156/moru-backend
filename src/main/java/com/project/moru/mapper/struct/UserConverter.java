@@ -1,7 +1,7 @@
 package com.project.moru.mapper.struct;
 
-import com.project.moru.domain.dto.RegisterRequestDto;
-import com.project.moru.domain.entity.User;
+import com.project.moru.domain.dto.user.RegisterRequestDto;
+import com.project.moru.domain.entity.user.User;
 import org.mapstruct.Builder;
 import org.mapstruct.Mapper;
 

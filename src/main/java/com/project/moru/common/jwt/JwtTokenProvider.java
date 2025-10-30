@@ -3,8 +3,10 @@ package com.project.moru.common.jwt;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import javax.crypto.SecretKey;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 @Component
@@ -40,6 +42,16 @@ public class JwtTokenProvider {
         .setExpiration(expiry)
         .signWith(secretKey)
         .compact();
+  }
+  
+  /** Authorization 헤더에서 accessToken 추출 **/
+  public String resolveToken(HttpServletRequest request) {
+    String bearerToken = request.getHeader("Authorization");
+    
+    if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+      return bearerToken.substring(7); // "Bearer " 이후 토큰 부분만 반환
+    }
+    return null;
   }
   
   /** 토큰 유효성 검사 */

@@ -28,6 +28,10 @@ public class SecurityConfig {
         .csrf(AbstractHttpConfigurer::disable)
         .authorizeRequests(auth -> auth
             .antMatchers(
+                "/api/auth/logout",
+                "/api/auth/refresh"
+            ).authenticated()
+            .antMatchers(
                 "/api/**",
                 "/api/auth/**",
                 "/swagger-ui/**",

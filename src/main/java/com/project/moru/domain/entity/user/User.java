@@ -1,4 +1,4 @@
-package com.project.moru.domain.entity;
+package com.project.moru.domain.entity.user;
 
 import lombok.*;
 

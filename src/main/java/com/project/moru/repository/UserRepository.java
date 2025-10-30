@@ -1,6 +1,6 @@
 package com.project.moru.repository;
 
-import com.project.moru.domain.entity.User;
+import com.project.moru.domain.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

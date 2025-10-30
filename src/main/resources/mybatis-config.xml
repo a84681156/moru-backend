@@ -10,6 +10,6 @@
   </settings>
   
   <typeAliases>
-    <typeAlias alias="DummyDto" type="com.project.moru.domain.dto.DummyDto"/>
+
   </typeAliases>
 </configuration>
